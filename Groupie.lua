@@ -41,23 +41,10 @@ task.delay(3, function()
     DupeBox:AddDivider("")
 
     DupeBox:AddButton("Join Dupe Server (required)", function()
-        local TeleportService = game:GetService("TeleportService")
-    local Players = game:GetService("Players")
-
-    local function teleportToPlace(placeId)
-    local success, err = pcall(function()
-        TeleportService:Teleport(placeId, Players.LocalPlayer)
-    end)
-
-    if not success then
-        warn("[TP Handler] Teleport failed:", err)
-    else
-        print("[TP Handler] Teleport started successfully.")
-    end
-end
-
--- Replace with your target place ID
-teleportToPlace(82028255140111)
+      local Players = game:GetService("Players")
+	local TeleportService = game:GetService("TeleportService")
+	local LocalPlayer = Players.LocalPlayer
+	TeleportService:Teleport(82028255140111, LocalPlayer)
     end)
 
    DupeBox:AddDivider("")
