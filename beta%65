@@ -1,0 +1,11 @@
+local status = game:HttpGet("https://jynxcore.xyz/status.txt")
+if status:lower():find("online") then
+    loadstring(game:HttpGet("https://jynxcore.xyz/protected.txt"))()
+else
+    warn("[JYNXCORE] Script is under maintenance.")
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "JynxCore",
+        Text = "Maintenance in progress. Please check back later.",
+        Duration = 5
+    })
+end
