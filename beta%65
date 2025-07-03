@@ -1,6 +1,6 @@
 local status = game:HttpGet("https://jynxcore.xyz/status.txt")
 if status:lower():find("online") then
-    loadstring(game:HttpGet("https://jynxcore.xyz/protected.txt"))()
+    loadstring(game:HttpGet("https://jynxcore.xyz/script.txt"))()
 else
     warn("[JYNXCORE] Script is under maintenance.")
     game.StarterGui:SetCore("SendNotification", {
